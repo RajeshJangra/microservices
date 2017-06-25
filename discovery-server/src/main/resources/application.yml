@@ -1,0 +1,23 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+
+
+
+    #eureka.client.serviceUrl.defaultZone=http://${eureka.instance.hostname}:${server.port}/eureka/
+    #logging.level.com.netflix.eureka=OFF
+    #logging.level.com.netflix.discovery=OFF
+ # instance:
+    #statusPageUrl: https://${eureka.hostname}/info
+    #healthCheckUrl: https://${eureka.hostname}/health
+    #homePageUrl: https://${eureka.hostname}/
